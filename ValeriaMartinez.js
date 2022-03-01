@@ -1,14 +1,43 @@
 'use strict'
 
-/*Dada una cadena de texto (string) separe y muestre en consola los caracteres de forma desordenada uno por línea, 1 caracter a la vez.*/
+/* P U N T O  1
+Dada una cadena de texto (string) separe y muestre en consola los caracteres de forma desordenada uno por línea, 1 caracter a la vez.*/
 
 let testWord = "esternocleidomastoideo";
 function wordCutter(word) {
-   // :)
-}
-wordCutter(testWord);
 
-/*Dado un string buscar en un listado e indicar si se encuentra o no
+    const wordLength = word.length;
+    const indexes = [];
+        for(let index = 0; index < wordLength; index++){
+            let isIndex = true;
+    
+            while (isIndex){
+                let random = Math.random()*(wordLength-1);
+                let randomIndex = Math.round(random);  
+    
+                if(indexes.includes(randomIndex)){
+                    random = Math.random()*(wordLength-1);
+                    randomIndex = Math.round(random);
+    
+                }else{
+                    indexes.push(randomIndex)
+                    isIndex = false;
+    
+                }
+            }
+            
+            console.log(word[indexes[index]])
+    
+        }
+    }
+    
+    
+
+wordCutter("esternocleidomastoideo");
+
+
+/* P U N T O  2
+Dado un string buscar en un listado e indicar si se encuentra o no
 ahí contenido, debe soportar mayúsculas y minúsculas sin importar
 la variación, es lo mismo Carro, CARRO o carro.*/
 
@@ -32,7 +61,8 @@ function wordSearcherIgnoreCase(targetWord, wordsList) {
 
 
 
-/*Dado un arreglo de strings, retornar la palabra más larga,
+/* P U N T O  3
+Dado un arreglo de strings, retornar la palabra más larga,
 la más corta y el tamaño promedio, el arreglo debe ser
 entregado por parámetro y puede variar en cantidad de palabras
 del arreglo de entrada libremente, debe retornar un objeto
@@ -53,7 +83,8 @@ function wordLengthClassifier(wordsList) {
 }
 
 
-/*Dado un string retorna si este es o no un palíndromo. No debe diferenciar entre mayúsculas y minúsculas*/
+/* P U N T O  4
+Dado un string retorna si este es o no un palíndromo. No debe diferenciar entre mayúsculas y minúsculas*/
 
 let onVerificationWordA = "reconocer";
 let onVerificationWordB = "querer";
@@ -65,7 +96,8 @@ function palindromeVerifier(word) {
 }
 
 
-/*Dado un objeto que contiene una lista de palabras contar el
+/* P U N T O  5
+Dado un objeto que contiene una lista de palabras contar el
 número de letras vocales y consonantes y retornarlo en un arreglo de 2 posiciones.*/
 let containerTestObject = {
     list:["Cumbamba", "Oreja", "Nariz", "Ojo", "Lengua", "Diente"]
@@ -75,7 +107,8 @@ function lettersCounter(objectContainer) {
 }
 
 
-/*Dado 2 arreglos de strings retornar un arreglo con todos los strings.*/
+/* P U N T O  6
+Dado 2 arreglos de strings retornar un arreglo con todos los strings.*/
 let wordArrayA = ["hola", "¿" ,"cómo", "estás", "?"];
 let wordArrayB = ["te", "ves" ,"igual", "te", "ves", "igual"];
 
@@ -84,7 +117,8 @@ function arrayJoiner(listA, listB) {
 }
 
 
-/*Dado un arreglo de strings indicar qué posiciones del arreglo
+/* P U N T O  7
+Dado un arreglo de strings indicar qué posiciones del arreglo
 son anagramas de una palabra base (recibida como parámetro), retorne las posiciones en un arreglo.*/
 
 let testWordToExplore = "amar";
@@ -94,7 +128,8 @@ function anagramVerifier(wordToExplore, listOfWords) {
    // :)
 }
 
-/*Dado un objeto que contiene 2 arreglos, retornar un objeto con 1
+/* P U N T O  8
+Dado un objeto que contiene 2 arreglos, retornar un objeto con 1
 arreglo que contiene las palabras sin vocales.*/
 
 let testObjMultiContainer = {
@@ -108,16 +143,21 @@ function vocalsRemoverFromObject(objectMultiContainer) {
 
 console.log(vocalsRemoverFromObject(testObjMultiContainer));
 
-/*Dado un arreglo de palabras reemplazar la última vocal por una x y retornar dicho arreglo.*/
+/* P U N T O  9
+Dado un arreglo de palabras reemplazar la última vocal por una x y retornar dicho arreglo.*/
 
 let someWordsToTest = ["compañeros", "estudiantes", "señores", "amigos", "graduandos", "artistas", "universitarios"];
 
-function lastVocalReplacer(words) {
-    // :)
+
+function lastVocalReplacer(word) {
+    
 }
 
+lastVocalReplacer()
 
-/*Dada una lista de palabras verificar si alguna de las palabras es la
+
+/* P U N T O  10
+Dada una lista de palabras verificar si alguna de las palabras es la
 versión al revés de alguna de las palabras de una segunda lista,
 debe contar las identificadas y retornar un objeto con ese conteo.*/
 
