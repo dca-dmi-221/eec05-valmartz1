@@ -222,7 +222,26 @@ let testObjMultiContainer = {
 };
 
 function vocalsRemoverFromObject(objectMultiContainer) {
-    // :)
+    let listOfEight = objectMultiContainer.listA.concat(objectMultiContainer.listB);
+  
+
+  listOfEight.forEach(wordEight => {
+      let actualWord = []
+      let outcome = []
+      wordEight.split('').forEach(letterEight => {
+          if (w !== 'a'||
+          letterEight !=='e'||
+          letterEight !=='i'|| 
+          letterEight !== 'o'|| 
+          letterEight !=='u'){
+              actualWord.push(letterEight);
+          } 
+          
+      }) 
+      outcome.push(actualWord.join(''))
+      
+  }) 
+  return {outcome}
 }
 
 console.log(vocalsRemoverFromObject(testObjMultiContainer));
