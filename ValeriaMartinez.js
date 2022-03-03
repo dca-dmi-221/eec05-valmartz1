@@ -3,7 +3,7 @@
 /* P U N T O  1
 Dada una cadena de texto (string) separe y muestre en consola los caracteres de forma desordenada uno por línea, 1 caracter a la vez.*/
 
-let testWord = "esternocleidomastoideo";
+let testWord = "sternocleidomastoid";
 function wordCutter(word) {
 
     const wordLength = word.length;
@@ -33,7 +33,7 @@ function wordCutter(word) {
     
     
 
-wordCutter("esternocleidomastoideo");
+wordCutter("sternocleidomastoid");
 
 
 /* P U N T O  2
@@ -139,11 +139,11 @@ function palindromeVerifier(wordFour) {
     let palindroWord = wordFour.toLowerCase().split("").reverse().join("");
     if (palindroWord === wordFour) {
 
-        console.log("Esta palabra es palíndrome:" + wordFour)} 
+        console.log("This word is a palindrome:" + wordFour)} 
 
         else {
 
-        console.log("Esta palabra no es palíndrome:" + wordFour)
+        console.log("This word is NOT a palindrome:" + wordFour)
     }
 }
         
@@ -161,9 +161,35 @@ let containerTestObject = {
     list:["Cumbamba", "Oreja", "Nariz", "Ojo", "Lengua", "Diente"]
 }
 function lettersCounter(objectContainer) {
-   // :)
+    let vocal = 0;
+    let consonant = 0;
+
+    for(let letterTester = 0; letterTester < objectContainer.list.length; letterTester++){
+        
+        for(let index = 0; index < objectContainer.list[letterTester].length; index++){
+            
+            let equalLetter = objectContainer.list[letterTester][index].toLowerCase();
+
+            //Vocals
+            if("a" == equalLetter||"e" == equalLetter||"i" == equalLetter||"o" == equalLetter||"u" == equalLetter){
+                vocal++;
+            
+            //Consonants
+            }else if("b"== equalLetter||"c"== equalLetter||"d"== equalLetter||"f"== equalLetter||"g"== equalLetter||"h"== equalLetter||"j"== equalLetter||"k"== equalLetter||"l"== equalLetter||"m"== equalLetter||"n"== equalLetter||"p"== equalLetter||"q"== equalLetter||"r"== equalLetter||"s"== equalLetter||"t"== equalLetter||"v"== equalLetter||"w"== equalLetter||"x"== equalLetter||"y"== equalLetter||"z"== equalLetter){
+                consonant++;
+            }
+        }
+    }
+    
+    
+    let output = [vocal, consonant];
+    return output;
 }
 
+let totalOfLetters = lettersCounter(containerTestObject);
+
+console.log("There are this number of vocals:" + totalOfLetters[0] );
+console.log("There are this number of consonants:" + totalOfLetters[1]);
 
 /* P U N T O  6
 Dado 2 arreglos de strings retornar un arreglo con todos los strings.*/
