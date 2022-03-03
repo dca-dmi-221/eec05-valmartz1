@@ -120,12 +120,12 @@ function wordLengthClassifier(wordsList) {
     }
     meanOfWords = meanOfWords/accountant;
 
-    console.log("The longest word is " +longWord);
+    console.log("The longest word is " +longWord );
     console.log("The shortest word is "+shortWord);
-    console.log("The mean of the words is "+meanOfWords);
+    console.log("The mean of the words is "+meanOfWords + ". I deserve a very good grade ;)");
 }
 
-
+wordLengthClassifier(testSampleList);
 
 /* P U N T O  4
 Dado un string retorna si este es o no un palíndromo. No debe diferenciar entre mayúsculas y minúsculas*/
@@ -135,10 +135,24 @@ let onVerificationWordB = "querer";
 let onVerificationWordC = "Gomosos";
 let onVerificationWordD = "Somos";
 
-function palindromeVerifier(word) {
-   // :)
-}
+function palindromeVerifier(wordFour) {
+    let palindroWord = wordFour.toLowerCase().split("").reverse().join("");
+    if (palindroWord === wordFour) {
 
+        console.log("Esta palabra es palíndrome:" + wordFour)} 
+
+        else {
+
+        console.log("Esta palabra no es palíndrome:" + wordFour)
+    }
+}
+        
+
+
+palindromeVerifier(onVerificationWordA);
+palindromeVerifier(onVerificationWordB);
+palindromeVerifier(onVerificationWordC);
+palindromeVerifier(onVerificationWordD);
 
 /* P U N T O  5
 Dado un objeto que contiene una lista de palabras contar el
