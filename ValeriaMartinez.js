@@ -193,11 +193,24 @@ console.log("There are this number of consonants:" + totalOfLetters[1]);
 
 /* P U N T O  6
 Dado 2 arreglos de strings retornar un arreglo con todos los strings.*/
-let wordArrayA = ["hola", "¿" ,"cómo", "estás", "?"];
-let wordArrayB = ["te", "ves" ,"igual", "te", "ves", "igual"];
+let wordArrayA = ["hello", "how" ,"are", "you", "?"];
+let wordArrayB = ["you", "look" ,"great", "you", "look", "great"];
 
 function arrayJoiner(listA, listB) {
- // :)
+    let answer = [];
+    for(let index = 0; index < listA.length; index++){
+        answer.push(listA[index]);
+    }
+    for(let index = 0; index < listB.length; index++){
+        answer.push(listB[index]);
+    }
+    return answer;
+}
+
+
+let joinArrayTest = arrayJoiner(wordArrayA,wordArrayB);
+for(let index in joinArrayTest){
+    console.log(joinArrayTest[index]);
 }
 
 
