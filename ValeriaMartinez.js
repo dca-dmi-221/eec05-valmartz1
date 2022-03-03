@@ -99,8 +99,32 @@ let testSampleList = [
 ];
 
 function wordLengthClassifier(wordsList) {
-    // :)
+    let longWord = "";
+    let shortWord = wordsList[0];
+    let meanOfWords = 0; // Promedio
+    let accountant = 0;
+
+    for(let index = 0; index < wordsList.length; index++){
+        
+        if(wordsList[index].length > longWord.length){
+            longWord = wordsList[index];
+        }//For the longest word
+
+       
+        if(wordsList[index].length < shortWord.length){
+            shortWord = wordsList[index];
+        }//For the shortest word
+
+        meanOfWords += wordsList[index].length;
+        accountant++;
+    }
+    meanOfWords = meanOfWords/accountant;
+
+    console.log("The longest word is " +longWord);
+    console.log("The shortest word is "+shortWord);
+    console.log("The mean of the words is "+meanOfWords);
 }
+
 
 
 /* P U N T O  4
