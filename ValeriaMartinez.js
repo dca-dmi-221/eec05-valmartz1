@@ -242,7 +242,7 @@ function vocalsRemoverFromObject(objectMultiContainer) {
       let actualWord = []
       let outcome = []
       wordEight.split('').forEach(letterEight => {
-          if (w !== 'a'||
+          if (letterEight !== 'a'||
           letterEight !=='e'||
           letterEight !=='i'|| 
           letterEight !== 'o'|| 
@@ -265,8 +265,8 @@ Dado un arreglo de palabras reemplazar la última vocal por una x y retornar dic
 let someWordsToTest = ["compañeros", "estudiantes", "señores", "amigos", "graduandos", "artistas", "universitarios"];
 
 
-function lastVocalReplacer(word) {
-    
+function lastVocalReplacer(wordNine) {
+   
 }
 
 lastVocalReplacer()
